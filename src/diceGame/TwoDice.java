@@ -1,4 +1,5 @@
 package diceGame;
+import java.util.Random;
 
 public class TwoDice {
 
@@ -10,8 +11,8 @@ public class TwoDice {
 	}
 	public static void roll() {		//Rolls both dice to a value between 1 and 6.
 
-		die1 = (int)(Math.random())*6 + 1;
-		die2 = (int)(Math.random())*6 + 1;
+		die1 = (int)(Math.random()*6) + 1;
+		die2 = (int)(Math.random()*6) + 1;
 	} 
 	public int getdie1() {	//Returns value of die 1.
 		return die1;
