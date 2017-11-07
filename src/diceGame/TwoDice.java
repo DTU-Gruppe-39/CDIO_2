@@ -1,21 +1,26 @@
 package diceGame;
 
 public class TwoDice {
-	private int faceValue;
-	private int faces = 12;
-	
+
+	private int die1; //value of 1st die.
+	private int die2; //value of 2nd die.
+
 	public TwoDice() {
 		roll();
 	}
-	// roll the die and return the value (1-6)
-	public int roll() {
-		double d1=(float)Math.random();     // [0 ; 1[
-		double d2=d1*faces;                    // [0 ; 6[
-		faceValue = (int)Math.ceil(d2);        // [1-6] integer
-		return faceValue;
+	public void roll() {
+
+		die1 = (int)(Math.random())*6 + 1;
+		die2 = (int)(Math.random())*6 + 1;
+	} 
+	public int getdie1() {
+		return die1;
 	}
-	
-	public int getFaceValue() {
-		return faceValue;
+	public int getdie2() {
+		return die2;
 	}
+	public int getDiceTotal() {
+		return die1 + die2;
+	}
+
 }
