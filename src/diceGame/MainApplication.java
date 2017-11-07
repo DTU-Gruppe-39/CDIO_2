@@ -15,9 +15,9 @@ public class MainApplication {
 		+ " and " + dice.getdie2());
 		System.out.println("The total is: " + dice.getDiceTotal());
 		
-		//Print string connected to specific field
+		//Print string connected to specific field	
 		try {
-			System.out.println(Game.printText(dice.getDiceTotal()));
+			Game.printText(dice.getDiceTotal());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

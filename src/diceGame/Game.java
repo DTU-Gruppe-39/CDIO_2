@@ -7,38 +7,37 @@ import java.io.IOException;
 
 public class Game {
 
-	public void updateBalance () {
-		int sum = 1;
+	public void updateBalance (int field) {
 
-		switch (sum) {
+		switch (field) {
 		case 1: 
 			break;
-		case 2: Player.balance += 250;
+		case 2: AccountBalance.updateBalance(250);
 		break;
-		case 3: Player.balance += -100;
+		case 3: AccountBalance.updateBalance(-100);
 		break;
-		case 4: Player.balance += 100;
+		case 4: AccountBalance.updateBalance(100);
 		break;
-		case 5: Player.balance += -20;
+		case 5: AccountBalance.updateBalance(-20);
 		break;
-		case 6: Player.balance += 180;
+		case 6: AccountBalance.updateBalance(180);
 		break;
-		case 7: Player.balance += 0;
+		case 7: AccountBalance.updateBalance(0);
 		break;
-		case 8: Player.balance += -70;
+		case 8: AccountBalance.updateBalance(-70);
 		break;
-		case 9: Player.balance += 60;
+		case 9: AccountBalance.updateBalance(60);
 		break;
-		case 10: Player.balance += -80; //And extra turn
+		case 10: AccountBalance.updateBalance(-80); //And extra turn
+		break;   
+		case 11: AccountBalance.updateBalance(-50);
 		break;
-		case 11: Player.balance += -50;
-		break;
-		case 12: Player.balance += 650;
+		case 12: AccountBalance.updateBalance(650);
 		break;
 		}
 	}
 
-	public static String printText (int field) throws IOException {
+	public static void printText (int field) throws IOException {
 		String str = "";
 		String file = "src/textFile.txt";
 		BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -48,6 +47,6 @@ public class Game {
 			str = currentLine;
 		}
 		reader.close();
-		return str;
+		System.out.println(str);
 	}
 }
