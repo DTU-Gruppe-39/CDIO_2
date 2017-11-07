@@ -22,5 +22,4 @@ public class TwoDice {
 	public int getDiceTotal() {
 		return die1 + die2;
 	}
-
 }
