@@ -38,17 +38,16 @@ public class Game {
 		}
 	}
 
-	public String printText (int field) throws IOException {
+	public static String printText (int field) throws IOException {
 		String str = "";
-		String file = "textFile.txt";
+		String file = "src/textFile.txt";
 		BufferedReader reader = new BufferedReader(new FileReader(file));
 
-		for (int i = 0; i > field; i++) {
+		for (int i = 0; i < field; i++) {
 			String currentLine = reader.readLine();
 			str = currentLine;
 		}
 		reader.close();
-
 		return str;
 	}
 }
