@@ -14,7 +14,7 @@ public class Test {
 			.build();
 	fields[1] = new Shipping.Builder()
 			.setTitle("Tower")
-//			.setPicture(
+//			.setPicture(picture)
 			.build();
 	fields[2] = new Shipping.Builder()
 			.setTitle("Crater")
@@ -24,6 +24,44 @@ public class Test {
 			.setTitle("Palace Gates")
 //			.setPicture(picture)
 			.build();
-//	Vi manggler udover title og picture, description text, og oprette spillere osv.
+	fields[4] = new Shipping.Builder()
+			.setTitle("Cold Desert")
+//			.setPicture(picture)
+			.build();
+	fields[5] = new Shipping.Builder()
+			.setTitle("Walled City")
+//			.setPicture(picture)
+			.build();
+	fields[6] = new Shipping.Builder()
+			.setTitle("Monastary")
+//			.setPicture(picture)
+			.build();
+	fields[7] = new Shipping.Builder()
+			.setTitle("Black Cave")
+//			.setPicture(picture)
+			.build();
+	fields[8] = new Shipping.Builder()
+			.setTitle("Huts in the mountain")
+//			.setPicture(picture)
+			.build();
+	fields[9] = new Shipping.Builder()
+			.setTitle("The Werewall")
+//			.setPicture(picture)
+			.build();
+	fields[10] = new Shipping.Builder()
+			.setTitle("The Pit")
+//			.setPicture(picture)
+			.build();
+	fields[11] = new Shipping.Builder()
+			.setTitle("Goldmine")
+//			.setPicture(picture)
+			.build();
+	
+	
+	
+	
+	
+	
+//	Vi mangler udover picture, description text, og oprette spillere osv.
 	}
 }
