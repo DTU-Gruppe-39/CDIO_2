@@ -7,7 +7,7 @@ public class Test {
 //Test
 	public static void main(String[] Args) {
 	Field [] fields = new Field [12];
-	GUI.create(fields);
+//	GUI.create(fields);
 	
 	fields[0] = new Street.Builder()
 			.setTitle("Start")
@@ -58,7 +58,11 @@ public class Test {
 			.build();
 	
 	
-	
+	GUI.create(fields);
+	GUI.addPlayer("peter", 1000);
+	while (true) {
+		
+	}
 	
 	
 	
