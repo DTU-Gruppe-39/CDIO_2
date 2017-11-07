@@ -4,7 +4,7 @@ public class MainApplication {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		TwoDice dice;
+		TwoDice dice;	//Test of TwoDice in Main.
 
 		dice = new TwoDice();
 
