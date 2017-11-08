@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import desktop_resources.GUI;
+
 public class Game {
 
 	public static void main(String[] args) {
@@ -82,26 +84,26 @@ public class Game {
 	}
 
 
-public void updateTurn (int field) {
+public void updateBalance (int field, Player name) {
 
 	switch (field) {
 	case 1: 
 		break;
-	case 2: AccountBalance.setBalance(250);
-	break;                 
-	case 3: AccountBalance.setBalance(-100);
-	break;                 
-	case 4: AccountBalance.setBalance(100);
-	break;                 
-	case 5: AccountBalance.setBalance(-20);
-	break;                 
-	case 6: AccountBalance.setBalance(180);
-	break;                 
-	case 7: AccountBalance.setBalance(0);
-	break;                 
-	case 8: AccountBalance.setBalance(-70);
-	break;                 
-	case 9: AccountBalance.setBalance(60);
+	case 2: balance.setBalance(250);
+	break;  balance 
+	case 3: balance.setBalance(-100);
+	break;  balance 
+	case 4: balance.setBalance(100);
+	break;  balance 
+	case 5: balance.setBalance(-20);
+	break;  balance 
+	case 6: balance.setBalance(180);
+	break;  balance 
+	case 7: balance.setBalance(0);
+	break;  balance 
+	case 8: balance.setBalance(-70);
+	break;  balance 
+	case 9: balance.setBalance(60);
 	break;
 	case 10: AccountBalance.setBalance(-80); //And extra turn
 	break;   
@@ -111,4 +113,15 @@ public void updateTurn (int field) {
 	break;
 	}
 }
+
+public void updateTurn (int field, Player name) {
+	updateBalance(field);
+	updateGUI(field, name);
+}
+
+public void updateGUI (int field, Player name) {
+	GUI.setCar(field, name.getName());
+}
+
+
 }

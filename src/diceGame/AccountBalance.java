@@ -1,7 +1,7 @@
 package diceGame;
 
 public class AccountBalance {
-	private int balance;
+	public static int balance;
 
 	public AccountBalance(int balance) {
 		super();
