@@ -22,11 +22,25 @@ public class Game {
 		player2 = new Player(PlayerTwoName, dice, 1000);
 	}
 	
-	private int whosTurn = 0;
+	private static int whosTurn = 0;
 
 	public static void main(String[] args) {
 		Test.GUILauncher();
 //		while (Player one.balance < 3000 && Player two.balance < 3000) {
+		
+		if (whosTurn == 0) {
+			//Roll dice
+			//----------
+			updateTurn(WHICH-FIELD, player1);
+			
+		} else {
+			//Roll dice
+			//----------
+			updateTurn(WHICH-FIELD, player2);
+		}
+		
+		
+		
 //			Player one rolls
 //			Update Gui
 //			Update player ones balance
@@ -36,17 +50,17 @@ public class Game {
 //			Update player twos balance
 //		}
 //		
-		if (Player.getBalance() > 3000) {
-			GUI.showMessage("Player two won");
+		if (player1.getBalance() > 3000) {
+			GUI.showMessage(player1.getName() + " won");
 		} else {
-			GUI.showMessage("Player one won");			
+			GUI.showMessage(player2.getName() + " won");			
 		}
 				
 		
 		
 		
-		
-		Player one = new Player("Peter", Player.createDice(), 1000);
+		//--------Skal nok slettes
+		//Player one = new Player("Peter", Player.createDice(), 1000);
 		
 
 		
@@ -57,7 +71,7 @@ public class Game {
 		
 		
 		
-		// TODO Auto-generated method stub
+		//Skal nok slettes
 		TwoDice dice;	//Test of TwoDice in Main.
 
 		dice = new TwoDice();  //Slettes
@@ -95,39 +109,42 @@ public class Game {
 	}
 
 
-public void updateBalance (int field) {
+public void updateBalance (int field, Player name) {
 
+	//Skal helst have formen player1.setBalance
+	//Så object.method()
+	
 	switch (field) {
 	case 1: 
 		break;
-	case 2: Player.setBalance(250);
+	case 2: name.setBalance(250);
 	break;  
-	case 3: Player.setBalance(-100);
-	break;   
-	case 4: Player.setBalance(100);
-	break;   
-	case 5: Player.setBalance(-20);
-	break;   
-	case 6: Player.setBalance(180);
-	break;   
-	case 7: Player.setBalance(0);
-	break;   
-	case 8: Player.setBalance(-70);
-	break;   
-	case 9: Player.setBalance(60);
-	break;
-	case 10: Player.setBalance(-80); //And extra turn
-	break;   
-	case 11: Player.setBalance(-50);
-	break;
-	case 12: Player.setBalance(650);
-	break;
+//	case 3: Player.setBalance(-100);
+//	break;   
+//	case 4: Player.setBalance(100);
+//	break;   
+//	case 5: Player.setBalance(-20);
+//	break;   
+//	case 6: Player.setBalance(180);
+//	break;   
+//	case 7: Player.setBalance(0);
+//	break;   
+//	case 8: Player.setBalance(-70);
+//	break;   
+//	case 9: Player.setBalance(60);
+//	break;
+//	case 10: Player.setBalance(-80); //And extra turn
+//	break;   
+//	case 11: Player.setBalance(-50);
+//	break;
+//	case 12: Player.setBalance(650);
+//	break;
 	}
 }
 
-public void updateTurn (int field, Player name) {
-	updateBalance(field);
-	updateGUI(field, name);
+public void updateTurn (int field, Player player) {
+	updateBalance(field, player);
+	updateGUI(field, player);
 	
 	if (field == 10) {
 	
@@ -141,8 +158,8 @@ public void updateTurn (int field, Player name) {
 }
 
 
-public void updateGUI (int field, Player name) {
-	GUI.setCar(field, name.getName());
+public void updateGUI (int field, Player player) {
+	GUI.setCar(field, player.getName());
 	
 	//Print text to GUI
 	try {

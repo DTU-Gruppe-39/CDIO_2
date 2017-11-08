@@ -12,7 +12,7 @@ public class AccountBalance {
 		return balance;
 	}
 
-	public static void setBalance(int balance) {
+	public void setBalance(int balance) {
 		if (AccountBalance.balance + balance < 0) {
 			AccountBalance.balance = 0;
 		} else {
