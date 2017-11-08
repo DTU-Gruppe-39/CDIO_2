@@ -11,7 +11,7 @@ import gui.Test;
 public class Game {
 
 	public static void main(String[] args) {
-		Test.GUILancher();
+		Test.GUILauncher();
 //		while (Player one.balance < 3000 && Player two.balance < 3000) {
 //			Player one rolls
 //			Update Gui
@@ -27,9 +27,7 @@ public class Game {
 //		} else {
 //			System.out.println("Player one won");			
 //		}
-		
-		
-		
+				
 		
 		
 		
