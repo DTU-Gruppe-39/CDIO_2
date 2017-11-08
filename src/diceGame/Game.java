@@ -116,7 +116,18 @@ public void updateBalance (int field) {
 public void updateTurn (int field, Player name) {
 	updateBalance(field);
 	updateGUI(field, name);
+	
+	if (field == 10) {
+	
+	}
+	else if (whosTurn == 0) {
+		whosTurn++;
+	}
+	else {
+		whosTurn--;
+	}
 }
+
 
 public void updateGUI (int field, Player name) {
 	GUI.setCar(field, name.getName());
