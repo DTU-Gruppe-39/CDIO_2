@@ -129,6 +129,7 @@ public class Test {
 	GUI.setCar(1, playerOneName);
 	GUI.setCar(1, playerTwoName);
 
+
 	while (true) {
 		
 	}

@@ -80,7 +80,7 @@ public class Game {
 			str = currentLine;
 		}
 		reader.close();
-		System.out.println(str);
+		GUI.showMessage(str);
 	}
 
 
@@ -121,6 +121,15 @@ public void updateTurn (int field, Player name) {
 
 public void updateGUI (int field, Player name) {
 	GUI.setCar(field, name.getName());
+	
+	GUI.displayChanceCard();
+	//Print text to GUI
+	try {
+		printText(field);
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 }
 
 
