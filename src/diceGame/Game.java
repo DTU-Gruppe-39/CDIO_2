@@ -36,11 +36,11 @@ public class Game {
 //			Update player twos balance
 //		}
 //		
-//		if (Player one.balance > 3000) {
-//			System.out.println("Player two won");
-//		} else {
-//			System.out.println("Player one won");			
-//		}
+		if (Player.getBalance() > 3000) {
+			GUI.showMessage("Player two won");
+		} else {
+			GUI.showMessage("Player one won");			
+		}
 				
 		
 		

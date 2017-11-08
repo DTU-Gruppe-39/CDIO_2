@@ -6,12 +6,12 @@ public class Player {
 	private String name;
 	private TwoDice dice;
 
-	public int getBalance() {
+	public static int getBalance() {
 		return AccountBalance.balance;
 	}
 	
 	public static void setBalance(int balance) {
-		AccountBalance.balance = balance;
+		AccountBalance.setBalance(balance);
 	}
 
 	public String getName() {

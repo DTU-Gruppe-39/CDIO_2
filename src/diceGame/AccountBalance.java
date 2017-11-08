@@ -12,8 +12,8 @@ public class AccountBalance {
 		return balance;
 	}
 
-	public void setBalance(int balance) {
-		if (AccountBalance.balance < balance) {
+	public static void setBalance(int balance) {
+		if (AccountBalance.balance + balance < 0) {
 			AccountBalance.balance = 0;
 		} else {
 		AccountBalance.balance += balance;
