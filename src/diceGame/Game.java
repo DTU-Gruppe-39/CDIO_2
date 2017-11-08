@@ -1,7 +1,6 @@
 package diceGame;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -23,6 +22,7 @@ public class Game {
 		player2 = new Player(PlayerTwoName, dice);
 	}
 	
+	private int whosTurn = 0;
 
 	public static void main(String[] args) {
 		Test.GUILauncher();
@@ -41,9 +41,7 @@ public class Game {
 //		} else {
 //			System.out.println("Player one won");			
 //		}
-		
-		
-		
+				
 		
 		
 		
@@ -130,12 +128,22 @@ public void updateBalance (int field) {
 public void updateTurn (int field, Player name) {
 	updateBalance(field);
 	updateGUI(field, name);
+	
+	if (field == 10) {
+	
+	}
+	else if (whosTurn == 0) {
+		whosTurn++;
+	}
+	else {
+		whosTurn--;
+	}
 }
+
 
 public void updateGUI (int field, Player name) {
 	GUI.setCar(field, name.getName());
 	
-	GUI.displayChanceCard();
 	//Print text to GUI
 	try {
 		printText(field);
