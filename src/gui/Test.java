@@ -108,15 +108,7 @@ public class Test {
 			.setPicture("lul.png")
 			.build();
 	
-	
-	Scanner sc = new Scanner(System.in);
-	System.out.println("Player one enter name");
-	String playerOneName = sc.next();
-	
-	System.out.println("Player two enter name");
-	String playerTwoName = sc.next();
-	
-	sc.close();
+
 	
 	
 	Car one = new Car.Builder()
@@ -130,6 +122,8 @@ public class Test {
 			.build();
 	
 	GUI.create(fields);
+	String playerOneName = GUI.getUserString("Player one enter name");
+	String playerTwoName = GUI.getUserString("Player two enter name");
 	GUI.addPlayer(playerOneName, 1000, one);
 	GUI.addPlayer(playerTwoName, 1000, two);
 	GUI.setCar(1, playerOneName);
