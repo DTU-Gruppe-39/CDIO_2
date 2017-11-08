@@ -13,11 +13,11 @@ public class TwoDiceRollTest {
 			int r1 = dice.getdie1();
 			int r2 = dice.getdie2();
 			int sum = r1 + r2;
-			
+
 			// 2 - 12
 			// 0 - c.length-1
 			eyecount[sum-2] += 1;
-			
+
 		}
 
 		for (int i = 0; i < 11; i++) { //For loop der printer antallet af gange de forskellige summe forkommer.
