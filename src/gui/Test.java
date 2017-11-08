@@ -7,7 +7,7 @@ import desktop_fields.Shipping;
 import desktop_resources.GUI;
 public class Test {
 //Test
-	public static void GUILancher() {
+	public static void GUILauncher() {
 	Field [] fields = new Field [12];
 //	GUI.create(fields);
 	
