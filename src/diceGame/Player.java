@@ -27,9 +27,10 @@ public class Player {
 		return dice;
 	}
 
-	public Player (String name, TwoDice dice) {
+	public Player (String name, TwoDice dice, int balance) {
 		this.name = name;
 		this.dice = dice;
+		setBalance(balance);
 	}
 
 }

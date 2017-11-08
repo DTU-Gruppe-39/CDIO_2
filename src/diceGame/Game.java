@@ -18,8 +18,8 @@ public class Game {
 	private TwoDice dice = new TwoDice();
 
 	public Game(String PlayerOneName, String PlayerTwoName) {
-		player1 = new Player(PlayerOneName, dice);
-		player2 = new Player(PlayerTwoName, dice);
+		player1 = new Player(PlayerOneName, dice, 1000);
+		player2 = new Player(PlayerTwoName, dice, 1000);
 	}
 	
 	private int whosTurn = 0;
@@ -46,7 +46,7 @@ public class Game {
 		
 		
 		
-		Player one = new Player("Peter", Player.createDice());
+		Player one = new Player("Peter", Player.createDice(), 1000);
 		
 
 		
