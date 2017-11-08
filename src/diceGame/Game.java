@@ -1,7 +1,6 @@
 package diceGame;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -9,6 +8,7 @@ import desktop_resources.GUI;
 import gui.Test;
 
 public class Game {
+	private int whosTurn = 0;
 
 	public static void main(String[] args) {
 		Test.GUILauncher();
@@ -121,7 +121,6 @@ public void updateTurn (int field, Player name) {
 public void updateGUI (int field, Player name) {
 	GUI.setCar(field, name.getName());
 	
-	GUI.displayChanceCard();
 	//Print text to GUI
 	try {
 		printText(field);
