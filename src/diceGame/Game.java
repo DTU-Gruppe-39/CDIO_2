@@ -6,11 +6,12 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import desktop_resources.GUI;
+import gui.Test;
 
 public class Game {
 
 	public static void main(String[] args) {
-		
+		Test.GUILancher();
 //		while (Player one.balance < 3000 && Player two.balance < 3000) {
 //			Player one rolls
 //			Update Gui
