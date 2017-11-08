@@ -2,6 +2,7 @@ package gui;
 import desktop_resources.GUI;
 
 import java.awt.Color;
+import desktop_codebehind.Car;
 import desktop_resources.pics.*;
 import desktop_fields.Field;
 import desktop_fields.Shipping;
@@ -16,7 +17,7 @@ public class Test {
 			.setSubText("START")
 			.setDescription("Game starts here")
 			.setBgColor(Color.white)
-			.setPicture("cars.png")
+			.setPicture("lul.png")
 			.build();
 	
 	fields[1] = new Shipping.Builder()
@@ -107,12 +108,18 @@ public class Test {
 			.setPicture("lul.png")
 			.build();
 	
-	
+	Car car = new Car.Builder()
+		.typeRacecar()
+		.primaryColor(Color.BLUE)
+		.secondaryColor(Color.RED)
+		.build();
+
 	GUI.create(fields);
-	
+	GUI.addPlayer("Michael", 1000, car);
 	GUI.addPlayer("Peter", 1000);
 	GUI.addPlayer("Jens", 1000);
-	
+	GUI.setCar(1, "Peter");
+
 	while (true) {
 		
 	}
