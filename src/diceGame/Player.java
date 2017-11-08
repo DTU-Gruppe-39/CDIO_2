@@ -1,5 +1,7 @@
 package diceGame;
 
+import diceGame.TwoDice;
+
 public class Player {
 	private String name;
 	private TwoDice dice;
@@ -7,7 +9,7 @@ public class Player {
 	public int getBalance() {
 		return AccountBalance.balance;
 	}
-
+	
 	public static void setBalance(int balance) {
 		AccountBalance.balance = balance;
 	}

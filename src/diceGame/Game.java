@@ -6,12 +6,26 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import desktop_resources.GUI;
+import diceGame.TwoDice;
+import diceGame.Player;
 import gui.Test;
 
+
 public class Game {
+	private Player player1;
+	private Player player2;
+	
+	
+	private TwoDice dice = new TwoDice();
+
+	public Game(String PlayerOneName, String PlayerTwoName) {
+		player1 = new Player(PlayerOneName, dice);
+		player2 = new Player(PlayerTwoName, dice);
+	}
+	
 
 	public static void main(String[] args) {
-		Test.GUILancher();
+		Test.GUILauncher();
 //		while (Player one.balance < 3000 && Player two.balance < 3000) {
 //			Player one rolls
 //			Update Gui
@@ -34,11 +48,9 @@ public class Game {
 		
 		
 		
-		
-		
 		Player one = new Player("Peter", Player.createDice());
 		
-		
+
 		
 		
 		
