@@ -9,7 +9,7 @@ public class Game {
 
 	public static void main(String[] args) {
 		
-		while (Player one.balance >= 0 && Player two.balance >= 0) {
+		while (Player one.balance < 3000 && Player two.balance < 3000) {
 			Player one rolls
 			Update Gui
 			Update player ones balance
@@ -19,7 +19,7 @@ public class Game {
 			Update player twos balance
 		}
 		
-		if (Player one.balance < 0) {
+		if (Player one.balance > 3000) {
 			System.out.println("Player two won");
 		} else {
 			System.out.println("Player one won");			
@@ -82,7 +82,7 @@ public class Game {
 	}
 
 
-public void updateField (int field) {
+public void updateTurn (int field) {
 
 	switch (field) {
 	case 1: 

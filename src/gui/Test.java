@@ -1,11 +1,11 @@
 package gui;
-import desktop_resources.GUI;
-
 import java.awt.Color;
+import java.util.Scanner;
+
 import desktop_codebehind.Car;
-import desktop_resources.pics.*;
 import desktop_fields.Field;
 import desktop_fields.Shipping;
+import desktop_resources.GUI;
 public class Test {
 //Test
 	public static void main(String[] Args) {
@@ -108,17 +108,32 @@ public class Test {
 			.setPicture("lul.png")
 			.build();
 	
-	Car car = new Car.Builder()
-		.typeRacecar()
-		.primaryColor(Color.BLUE)
-		.secondaryColor(Color.RED)
+	
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Player one enter name");
+	String playerOneName = sc.next();
+	
+	System.out.println("Player two enter name");
+	String playerTwoName = sc.next();
+	
+	sc.close();
+	
+	
+	Car one = new Car.Builder()
+		.typeUfo()
+		.primaryColor(Color.RED)
 		.build();
-
+	
+	Car two = new Car.Builder()
+			.typeRacecar()
+			.primaryColor(Color.BLUE)
+			.build();
+	
 	GUI.create(fields);
-	GUI.addPlayer("Michael", 1000, car);
-	GUI.addPlayer("Peter", 1000);
-	GUI.addPlayer("Jens", 1000);
-	GUI.setCar(1, "Peter");
+	GUI.addPlayer(playerOneName, 1000, one);
+	GUI.addPlayer(playerTwoName, 1000, two);
+	GUI.setCar(1, playerOneName);
+	GUI.setCar(1, playerTwoName);
 
 	while (true) {
 		
