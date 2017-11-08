@@ -8,8 +8,8 @@ public class Player {
 		return AccountBalance.balance;
 	}
 
-	public void setBalance(AccountBalance balance) {
-		this.balance = balance;
+	public static void setBalance(int balance) {
+		AccountBalance.balance = balance;
 	}
 
 	public String getName() {

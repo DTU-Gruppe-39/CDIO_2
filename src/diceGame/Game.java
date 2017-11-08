@@ -11,21 +11,21 @@ public class Game {
 
 	public static void main(String[] args) {
 		
-		while (Player one.balance < 3000 && Player two.balance < 3000) {
-			Player one rolls
-			Update Gui
-			Update player ones balance
-			
-			Player two roles
-			Update Gui
-			Update player twos balance
-		}
-		
-		if (Player one.balance > 3000) {
-			System.out.println("Player two won");
-		} else {
-			System.out.println("Player one won");			
-		}
+//		while (Player one.balance < 3000 && Player two.balance < 3000) {
+//			Player one rolls
+//			Update Gui
+//			Update player ones balance
+//			
+//			Player two roles
+//			Update Gui
+//			Update player twos balance
+//		}
+//		
+//		if (Player one.balance > 3000) {
+//			System.out.println("Player two won");
+//		} else {
+//			System.out.println("Player one won");			
+//		}
 		
 		
 		
@@ -84,32 +84,32 @@ public class Game {
 	}
 
 
-public void updateBalance (int field, Player name) {
+public void updateBalance (int field) {
 
 	switch (field) {
 	case 1: 
 		break;
-	case 2: balance.setBalance(250);
-	break;  balance 
-	case 3: balance.setBalance(-100);
-	break;  balance 
-	case 4: balance.setBalance(100);
-	break;  balance 
-	case 5: balance.setBalance(-20);
-	break;  balance 
-	case 6: balance.setBalance(180);
-	break;  balance 
-	case 7: balance.setBalance(0);
-	break;  balance 
-	case 8: balance.setBalance(-70);
-	break;  balance 
-	case 9: balance.setBalance(60);
-	break;
-	case 10: AccountBalance.setBalance(-80); //And extra turn
+	case 2: Player.setBalance(250);
+	break;  
+	case 3: Player.setBalance(-100);
 	break;   
-	case 11: AccountBalance.setBalance(-50);
+	case 4: Player.setBalance(100);
+	break;   
+	case 5: Player.setBalance(-20);
+	break;   
+	case 6: Player.setBalance(180);
+	break;   
+	case 7: Player.setBalance(0);
+	break;   
+	case 8: Player.setBalance(-70);
+	break;   
+	case 9: Player.setBalance(60);
 	break;
-	case 12: AccountBalance.setBalance(650);
+	case 10: Player.setBalance(-80); //And extra turn
+	break;   
+	case 11: Player.setBalance(-50);
+	break;
+	case 12: Player.setBalance(650);
 	break;
 	}
 }
