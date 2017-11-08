@@ -5,6 +5,7 @@ import desktop_codebehind.Car;
 import desktop_fields.Field;
 import desktop_fields.Shipping;
 import desktop_resources.GUI;
+import diceGame.Game;
 public class Test {
 //Test
 	public static void GUILauncher() {
@@ -128,13 +129,13 @@ public class Test {
 	GUI.setCar(1, playerOneName);
 	GUI.setCar(1, playerTwoName);
 
-
+	Game.createPlayers(playerOneName, playerTwoName);
+	
 	while (true) {
 		
 	}
 	
 	
 	
-//	Mangler setPlayer og lidt andre metoder
 	}
 }

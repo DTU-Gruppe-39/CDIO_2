@@ -11,13 +11,13 @@ import gui.Test;
 
 
 public class Game {
-	private Player player1;
-	private Player player2;
+	private static Player player1;
+	private static Player player2;
 	
 	
-	private TwoDice dice = new TwoDice();
+	private static TwoDice dice = new TwoDice();
 
-	public Game(String PlayerOneName, String PlayerTwoName) {
+	public static void createPlayers(String PlayerOneName, String PlayerTwoName) {
 		player1 = new Player(PlayerOneName, dice, 1000);
 		player2 = new Player(PlayerTwoName, dice, 1000);
 	}
