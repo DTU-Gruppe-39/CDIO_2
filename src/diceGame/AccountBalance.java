@@ -16,7 +16,7 @@ public class AccountBalance {
 		if (AccountBalance.balance < balance) {
 			AccountBalance.balance = 0;
 		} else {
-		AccountBalance.balance = balance;
+		AccountBalance.balance += balance;
 		}
 	}
 	
