@@ -15,7 +15,7 @@ public class Game {
 	private static Player player2;
 	
 	
-//	private static TwoDice dice = new TwoDice(1,1);
+//	private TwoDice dice = new TwoDice(1,1);
 
 	public static void createPlayers(String PlayerOneName, String PlayerTwoName) {
 		player1 = new Player(PlayerOneName, 1, 1, 1000);
@@ -28,12 +28,16 @@ public class Game {
 		Test.GUILauncher();
 //		while (Player one.balance < 3000 && Player two.balance < 3000) {
 		
+		TwoDice dice = new TwoDice(1, 1);
+
 		if (whosTurn == 0) {
+			Game Turn = new Game();
 			
-			updateTurn(dice.roll(), player1);
+			Turn.updateTurn(dice.roll(), player1);
 			
 		} else {
-			updateTurn(dice.roll(), player2);
+			Game Turn = new Game();
+			Turn.updateTurn(dice.roll(), player2);
 		}
 		
 		

@@ -6,10 +6,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import diceGame.TwoDice;
+
 class J_U_TwoDice {
 
 	@BeforeEach
 	void setUp() throws Exception {
+		TwoDice dice = new TwoDice();
 	}
 
 	@AfterEach
@@ -18,7 +21,8 @@ class J_U_TwoDice {
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
+		
+		
 	}
 
 }
