@@ -37,10 +37,10 @@ public class Player {
 //		return dice;
 //	}
 
-	public Player (String name, int one, int two, int balance) {
+	public Player (String name, String accName, int one, int two, int balance) {
 		this.name = name;
-		AccountBalance account1 = new AccountBalance(balance);
-		this.account = account1;
+		AccountBalance accName = new AccountBalance(balance);
+		this.account = accName;
 		TwoDice dice = new TwoDice(one, two);
 		this.dice = dice;
 	}

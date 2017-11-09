@@ -15,9 +15,9 @@ public class Game {
 	private static Player player2;
 	private static TwoDice dice = new TwoDice(1,1);
 
-	public static void createPlayers(String PlayerOneName, String PlayerTwoName) {
-		player1 = new Player(PlayerOneName, 1, 1, 1000);
-		player2 = new Player(PlayerTwoName, 1, 1 , 1000);
+	public static void createPlayers(String PlayerOneName, String PlayerTwoName, String account1, String account2) {
+		player1 = new Player(PlayerOneName, account1, 1, 1, 1000);
+		player2 = new Player(PlayerTwoName, account2, 1, 1 , 1000);
 	}
 	
 	private static int whosTurn = 0;
