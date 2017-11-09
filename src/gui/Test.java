@@ -129,7 +129,7 @@ public class Test {
 	GUI.setCar(1, playerOneName);
 	GUI.setCar(1, playerTwoName);
 
-	Game.createPlayers(playerOneName, playerTwoName);
+	Game.createPlayers(playerOneName, playerTwoName, "account1", "account2");
 	
 	while (true) {
 		
