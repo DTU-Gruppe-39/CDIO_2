@@ -7,7 +7,7 @@ import java.io.IOException;
 import desktop_resources.GUI;
 import diceGame.TwoDice;
 import diceGame.Player;
-import gui.Test;
+import gui.GUIClass;
 
 
 public class Game {
@@ -23,7 +23,7 @@ public class Game {
 	private static int whosTurn = 0;
 
 	public static void main(String[] args) {
-		Test.GUILauncher();
+		GUIClass.GUILauncher();
 //		TwoDice(1, 1);
 		while (player1.getBalance() < 3000 && player2.getBalance() < 3000) {
 		if (whosTurn == 0) {

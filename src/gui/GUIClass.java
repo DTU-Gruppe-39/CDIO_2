@@ -6,7 +6,7 @@ import desktop_fields.Field;
 import desktop_fields.Shipping;
 import desktop_resources.GUI;
 import diceGame.Game;
-public class Test {
+public class GUIClass {
 //Test
 	public static void GUILauncher() {
 	Field [] fields = new Field [12];
