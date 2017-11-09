@@ -29,14 +29,14 @@ public class Game {
 //		while (Player one.balance < 3000 && Player two.balance < 3000) {
 		
 		if (whosTurn == 0) {
-			//Roll dice
-			//----------
-			updateTurn(WHICH-FIELD, player1);
+			dice.roll();
+			int Whatfield = dice.getDiceTotal();
+			updateTurn(Whatfield, player1);
 			
 		} else {
-			//Roll dice
-			//----------
-			updateTurn(WHICH-FIELD, player2);
+			dice.roll();
+			int Whatfield = dice.getDiceTotal();
+			updateTurn(Whatfield, player2);
 		}
 		
 		
