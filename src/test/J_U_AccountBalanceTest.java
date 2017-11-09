@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import diceGame.AccountBalance;
 
-public class AccountBalanceNegativBalanceTest {
+public class J_U_AccountBalanceTest {
 	AccountBalance ac;
 	@Before
 	public void setUp() throws Exception {
