@@ -15,11 +15,11 @@ public class Game {
 	private static Player player2;
 	
 	
-	private static TwoDice dice = new TwoDice();
+//	private TwoDice dice = new TwoDice(1,1);
 
 	public static void createPlayers(String PlayerOneName, String PlayerTwoName) {
-		player1 = new Player(PlayerOneName, dice, 1000);
-		player2 = new Player(PlayerTwoName, dice, 1000);
+		player1 = new Player(PlayerOneName, 1, 1, 1000);
+		player2 = new Player(PlayerTwoName, 1, 1 , 1000);
 	}
 	
 	private static int whosTurn = 0;
@@ -28,15 +28,16 @@ public class Game {
 		Test.GUILauncher();
 //		while (Player one.balance < 3000 && Player two.balance < 3000) {
 		
+		TwoDice dice = new TwoDice(1, 1);
+
 		if (whosTurn == 0) {
-			dice.roll();
-			int Whatfield = dice.getDiceTotal();
-			updateTurn(Whatfield, player1);
+			Game Turn = new Game();
+			
+			Turn.updateTurn(dice.roll(), player1);
 			
 		} else {
-			dice.roll();
-			int Whatfield = dice.getDiceTotal();
-			updateTurn(Whatfield, player2);
+			Game Turn = new Game();
+			Turn.updateTurn(dice.roll(), player2);
 		}
 		
 		
@@ -71,23 +72,23 @@ public class Game {
 		
 		
 		
-		//Skal nok slettes
-		TwoDice dice;	//Test of TwoDice in Main.
-
-		dice = new TwoDice();  //Slettes
-
-		TwoDice.roll();
-		System.out.println("The dice come up " + dice.getdie1() 
-		+ " and " + dice.getdie2());
-		System.out.println("The total is: " + dice.getDiceTotal());
-		
-		//Print string connected to specific field	
-		try {
-			Game.printText(dice.getDiceTotal());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		//Skal nok slettes
+//		TwoDice dice;	//Test of TwoDice in Main.
+//
+//		dice = new TwoDice();  //Slettes
+//
+//		TwoDice.roll();
+//		System.out.println("The dice come up " + dice.getdie1() 
+//		+ " and " + dice.getdie2());
+//		System.out.println("The total is: " + dice.getDiceTotal());
+//		
+//		//Print string connected to specific field	
+//		try {
+//			Game.printText(dice.getDiceTotal());
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 	}
 	

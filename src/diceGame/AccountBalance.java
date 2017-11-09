@@ -4,7 +4,6 @@ public class AccountBalance {
 	public int balance;
 
 	public AccountBalance(int balance) {
-		super();
 		this.balance = balance;
 	}
 
@@ -13,10 +12,10 @@ public class AccountBalance {
 	}
 
 	public void setBalance(int balance) {
-		if (AccountBalance.balance + balance < 0) {
-			AccountBalance.balance = 0;
+		if (this.balance + balance < 0) {
+			this.balance = 0;
 		} else {
-		AccountBalance.balance += balance;
+		this.balance += balance;
 		}
 	}
 	
