@@ -24,10 +24,9 @@ public class Game {
 
 	public static void main(String[] args) {
 		Test.GUILauncher();
-//		while (Player one.balance < 3000 && Player two.balance < 3000) {
 		
 //		TwoDice(1, 1);
-
+		while (player1.getBalance() < 3000 && player2.getBalance() < 3000) {
 		if (whosTurn == 0) {
 			Game Turn = new Game();
 			
@@ -36,6 +35,7 @@ public class Game {
 		} else {
 			Game Turn = new Game();
 			Turn.updateTurn(dice.roll(), player2);
+		}
 		}
 		
 		
@@ -47,7 +47,6 @@ public class Game {
 //			Player two roles
 //			Update Gui
 //			Update player twos balance
-//		}
 //		
 		if (player1.getBalance() > 3000) {
 			GUI.showMessage(player1.getName() + " won");
