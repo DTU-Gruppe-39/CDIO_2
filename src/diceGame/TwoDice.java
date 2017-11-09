@@ -5,7 +5,7 @@ public class TwoDice {
 	private int die1;	//value of 1st die.
 	private int die2;	//value of 2nd die.
 	private int faces = 6;
-	
+
 	public TwoDice(int die1, int die2) {
 		this.die1 = die2;
 		this.die2 = die2;
@@ -15,7 +15,7 @@ public class TwoDice {
 		double d1=(float)Math.random();		// [0 ; 1[
 		double d2 = d1*faces;				// [0 ; 6[
 		die1 = (int)Math.ceil(d2);			// [1-6] integer
-		
+
 		//die2
 		double d3=(float)Math.random();		// [0 ; 1[
 		double d4 = d3*faces;				// [0 ; 6[
