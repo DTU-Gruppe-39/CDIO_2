@@ -12,17 +12,21 @@ public class AccountBalance {
 	}
 
 	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+	
+	public void newBalance (int balance) {
 		if (this.balance + balance < 0) {
 			this.balance = 0;
 		} else {
 		this.balance += balance;
 		}
 	}
-	
-//	public static void updateBalance(Player name, int gold) {
-//		name.balance += gold;
-//	}
 
 
 
 }
+
+//	public static void updateBalance(Player name, int gold) {
+//		name.balance += gold;
+//	}

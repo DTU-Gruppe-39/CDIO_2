@@ -124,28 +124,28 @@ public void updateBalance (int field, Player name) {
 	switch (field) {
 	case 1: 
 		break;
-	case 2: name.setBalance(250);
+	case 2: name.setNewBalance(250);
 	break;  
-//	case 3: Player.setBalance(-100);
-//	break;   
-//	case 4: Player.setBalance(100);
-//	break;   
-//	case 5: Player.setBalance(-20);
-//	break;   
-//	case 6: Player.setBalance(180);
-//	break;   
-//	case 7: Player.setBalance(0);
-//	break;   
-//	case 8: Player.setBalance(-70);
-//	break;   
-//	case 9: Player.setBalance(60);
-//	break;
-//	case 10: Player.setBalance(-80); //And extra turn
-//	break;   
-//	case 11: Player.setBalance(-50);
-//	break;
-//	case 12: Player.setBalance(650);
-//	break;
+	case 3: name.setNewBalance(-100);
+	break;  
+	case 4: name.setNewBalance(100);
+	break;  
+	case 5: name.setNewBalance(-20);
+	break;  
+	case 6: name.setNewBalance(180);
+	break;  
+	case 7: name.setNewBalance(0);
+	break;  
+	case 8: name.setNewBalance(-70);
+	break;  
+	case 9: name.setNewBalance(60);
+	break;
+	case 10: name.setNewBalance(-80); //And extra turn
+	break;   
+	case 11: name.setNewBalance(-50);
+	break;
+	case 12: name.setNewBalance(650);
+	break;
 	}
 }
 

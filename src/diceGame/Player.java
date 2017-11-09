@@ -5,6 +5,7 @@ import diceGame.TwoDice;
 public class Player {
 	private String name;
 	private TwoDice dice;
+	private AccountBalance account;
 	
 	public TwoDice getDice() {
 		return dice;
@@ -14,14 +15,16 @@ public class Player {
 		this.dice = dice;
 	}
 
-	private AccountBalance account;
-
 	public int getBalance() {
-		return account.balance;
+		return this.account.balance;
 	}
 	
 	public void setBalance(int balance) {
-		account.setBalance(balance);
+		this.account.setBalance(balance);
+	}
+
+	public void setNewBalance(int balance) {
+		account.newBalance(balance);
 	}
 
 	public String getName() {
@@ -39,10 +42,8 @@ public class Player {
 
 	public Player (String name, String accName, int one, int two, int balance) {
 		this.name = name;
-		AccountBalance accName = new AccountBalance(balance);
-		this.account = accName;
+		this.account = new AccountBalance(balance);
 		TwoDice dice = new TwoDice(one, two);
 		this.dice = dice;
 	}
-
 }
