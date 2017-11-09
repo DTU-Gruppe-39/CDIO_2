@@ -160,7 +160,7 @@ public void updateTurn (int field, Player player) {
 
 public void updateGUI (int field, Player player) {
 	GUI.setCar(field, player.getName());
-	
+	GUI.setDice(dice.getdie1(), dice.getdie2());
 	//Print text to GUI
 	try {
 		printText(field);
