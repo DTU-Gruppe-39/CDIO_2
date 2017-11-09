@@ -7,7 +7,7 @@ import java.io.IOException;
 import desktop_resources.GUI;
 import diceGame.TwoDice;
 import diceGame.Player;
-import gui.Test;
+import gui.GUIClass;
 
 
 public class Game {
@@ -23,19 +23,19 @@ public class Game {
 	private static int whosTurn = 0;
 
 	public static void main(String[] args) {
-		Test.GUILauncher();
-//		while (Player one.balance < 3000 && Player two.balance < 3000) {
-		
+		GUIClass.GUILauncher();
 //		TwoDice(1, 1);
-
+		while (player1.getBalance() < 3000 && player2.getBalance() < 3000) {
 		if (whosTurn == 0) {
 			Game Turn = new Game();
-			
+			GUI.getUserButtonPressed("                                            Current turn: " + player1.getName(), "Roll");
 			Turn.updateTurn(dice.roll(), player1);
 			
 		} else {
 			Game Turn = new Game();
+			GUI.getUserButtonPressed("                                            Current turn: " + player2.getName(), "Roll");
 			Turn.updateTurn(dice.roll(), player2);
+		}
 		}
 		
 		
@@ -47,12 +47,13 @@ public class Game {
 //			Player two roles
 //			Update Gui
 //			Update player twos balance
-//		}
 //		
 		if (player1.getBalance() > 3000) {
 			GUI.showMessage(player1.getName() + " won");
+			GUI.close();
 		} else {
 			GUI.showMessage(player2.getName() + " won");			
+			GUI.close();
 		}
 				
 		
@@ -93,10 +94,10 @@ public class Game {
 
 
 	
-	private static void TwoDice(int i, int j) {
+	//private static void TwoDice(int i, int j) {
 		// TODO Auto-generated method stub
 		
-	}
+	//}
 
 
 
@@ -166,7 +167,9 @@ public void updateTurn (int field, Player player) {
 
 
 public void updateGUI (int field, Player player) {
+	GUI.removeAllCars(player.getName());
 	GUI.setCar(field, player.getName());
+	GUI.setBalance(player.getName(), player.getBalance());
 	GUI.setDice(dice.getdie1(), dice.getdie2());
 	//Print text to GUI
 	try {

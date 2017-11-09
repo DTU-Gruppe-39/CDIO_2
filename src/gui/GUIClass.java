@@ -6,7 +6,7 @@ import desktop_fields.Field;
 import desktop_fields.Shipping;
 import desktop_resources.GUI;
 import diceGame.Game;
-public class Test {
+public class GUIClass {
 //Test
 	public static void GUILauncher() {
 	Field [] fields = new Field [12];
@@ -22,7 +22,7 @@ public class Test {
 	
 	fields[1] = new Shipping.Builder()
 			.setTitle("Tower")
-			.setSubText("+200 gold")
+			.setSubText("+250 gold")
 			.setDescription("The Tower")
 			.setBgColor(Color.white)
 			.setPicture("lul.png")
@@ -131,9 +131,8 @@ public class Test {
 
 	Game.createPlayers(playerOneName, playerTwoName, "account1", "account2");
 	
-	while (true) {
-		
-	}
+	
+	
 	
 	
 	
