@@ -23,18 +23,22 @@ public class Game {
 	private static int whosTurn = 0;
 
 	public static void main(String[] args) {
-		GUIClass.GUILauncher();
+//		GUIClass.GUILauncher();
 //		TwoDice(1, 1);
+		Game.createPlayers("Player one", "Player two", "account1", "account2");
 		while (player1.getBalance() < 3000 && player2.getBalance() < 3000) {
 		if (whosTurn == 0) {
 			Game Turn = new Game();
-			GUI.getUserButtonPressed("                                            Current turn: " + player1.getName(), "Roll");
+//			GUI.getUserButtonPressed("                                            Current turn: " + player1.getName(), "Roll");
 			Turn.updateTurn(dice.roll(), player1);
-			
+			System.out.println(dice.getDiceTotal());
+			System.out.println("Player 1 balance " + player1.getBalance());
 		} else {
 			Game Turn = new Game();
-			GUI.getUserButtonPressed("                                            Current turn: " + player2.getName(), "Roll");
+//			GUI.getUserButtonPressed("                                            Current turn: " + player2.getName(), "Roll");
 			Turn.updateTurn(dice.roll(), player2);
+			System.out.println(dice.getDiceTotal());
+			System.out.println("Player 2 balance " + player2.getBalance());
 		}
 		}
 		
@@ -49,11 +53,11 @@ public class Game {
 //			Update player twos balance
 //		
 		if (player1.getBalance() > 3000) {
-			GUI.showMessage(player1.getName() + " won");
-			GUI.close();
+//			GUI.showMessage(player1.getName() + " won");
+//			GUI.close();
 		} else {
-			GUI.showMessage(player2.getName() + " won");			
-			GUI.close();
+//			GUI.showMessage(player2.getName() + " won");			
+//			GUI.close();
 		}
 				
 		
@@ -167,17 +171,17 @@ public void updateTurn (int field, Player player) {
 
 
 public void updateGUI (int field, Player player) {
-	GUI.removeAllCars(player.getName());
-	GUI.setCar(field, player.getName());
-	GUI.setBalance(player.getName(), player.getBalance());
-	GUI.setDice(dice.getdie1(), dice.getdie2());
-	//Print text to GUI
-	try {
-		printText(field);
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+//	GUI.removeAllCars(player.getName());
+//	GUI.setCar(field, player.getName());
+//	GUI.setBalance(player.getName(), player.getBalance());
+//	GUI.setDice(dice.getdie1(), dice.getdie2());
+//	//Print text to GUI
+//	try {
+//		printText(field);
+//	} catch (IOException e) {
+//		// TODO Auto-generated catch block
+//		e.printStackTrace();
+//	}
 }
 
 
