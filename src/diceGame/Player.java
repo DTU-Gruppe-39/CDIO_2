@@ -5,14 +5,23 @@ import diceGame.TwoDice;
 public class Player {
 	private String name;
 	private TwoDice dice;
+	
+	public TwoDice getDice() {
+		return dice;
+	}
+
+	public void setDice(TwoDice dice) {
+		this.dice = dice;
+	}
+
 	private AccountBalance account;
 
 	public int getBalance() {
-		return AccountBalance.balance;
+		return account.balance;
 	}
 	
 	public void setBalance(int balance) {
-		AccountBalance.setBalance(balance);
+		account.setBalance(balance);
 	}
 
 	public String getName() {
@@ -23,17 +32,17 @@ public class Player {
 		this.name = name;
 	}
 
-	public static TwoDice createDice() {	
-		TwoDice dice = new TwoDice();
-		return dice;
-	}
+//	public static TwoDice createDice() {	
+//		TwoDice dice = new TwoDice();
+//		return dice;
+//	}
 
-	public Player (String name, TwoDice dice, int balance) {
+	public Player (String name, int one, int two, int balance) {
 		this.name = name;
-		this.dice = dice;
-		//setBalance(balance);
 		AccountBalance account1 = new AccountBalance(balance);
 		this.account = account1;
+		TwoDice dice = new TwoDice(one, two);
+		this.dice = dice;
 	}
 
 }
