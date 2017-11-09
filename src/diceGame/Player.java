@@ -5,6 +5,7 @@ import diceGame.TwoDice;
 public class Player {
 	private String name;
 	private TwoDice dice;
+	private AccountBalance account;
 
 	public int getBalance() {
 		return AccountBalance.balance;
@@ -30,7 +31,9 @@ public class Player {
 	public Player (String name, TwoDice dice, int balance) {
 		this.name = name;
 		this.dice = dice;
-		setBalance(balance);
+		//setBalance(balance);
+		AccountBalance account1 = new AccountBalance(balance);
+		this.account = account1;
 	}
 
 }

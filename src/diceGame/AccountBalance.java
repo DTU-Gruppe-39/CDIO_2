@@ -1,11 +1,11 @@
 package diceGame;
 
 public class AccountBalance {
-	public static int balance;
+	public int balance;
 
 	public AccountBalance(int balance) {
 		super();
-		AccountBalance.balance = balance;
+		this.balance = balance;
 	}
 
 	public int getBalance() {
