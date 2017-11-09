@@ -13,13 +13,11 @@ import gui.Test;
 public class Game {
 	private static Player player1;
 	private static Player player2;
-	
-	
-//	private TwoDice dice = new TwoDice(1,1);
+	private static TwoDice dice = new TwoDice(1,1);
 
-	public static void createPlayers(String PlayerOneName, String PlayerTwoName) {
-		player1 = new Player(PlayerOneName, 1, 1, 1000);
-		player2 = new Player(PlayerTwoName, 1, 1 , 1000);
+	public static void createPlayers(String PlayerOneName, String PlayerTwoName, String account1, String account2) {
+		player1 = new Player(PlayerOneName, account1, 1, 1, 1000);
+		player2 = new Player(PlayerTwoName, account2, 1, 1 , 1000);
 	}
 	
 	private static int whosTurn = 0;
@@ -28,7 +26,7 @@ public class Game {
 		Test.GUILauncher();
 //		while (Player one.balance < 3000 && Player two.balance < 3000) {
 		
-		TwoDice dice = new TwoDice(1, 1);
+//		TwoDice(1, 1);
 
 		if (whosTurn == 0) {
 			Game Turn = new Game();
@@ -95,6 +93,14 @@ public class Game {
 
 
 	
+	private static void TwoDice(int i, int j) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
 	//Read from textFile
 	public static void printText (int field) throws IOException {
 		String str = "";
