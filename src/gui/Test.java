@@ -131,9 +131,8 @@ public class Test {
 
 	Game.createPlayers(playerOneName, playerTwoName, "account1", "account2");
 	
-	while (true) {
-		
-	}
+	
+	
 	
 	
 	

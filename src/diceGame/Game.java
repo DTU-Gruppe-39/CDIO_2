@@ -24,16 +24,16 @@ public class Game {
 
 	public static void main(String[] args) {
 		Test.GUILauncher();
-		
 //		TwoDice(1, 1);
 		while (player1.getBalance() < 3000 && player2.getBalance() < 3000) {
 		if (whosTurn == 0) {
 			Game Turn = new Game();
-			
+			GUI.getUserButtonPressed("                                            Current turn: " + player1.getName(), "Roll");
 			Turn.updateTurn(dice.roll(), player1);
 			
 		} else {
 			Game Turn = new Game();
+			GUI.getUserButtonPressed("                                            Current turn: " + player2.getName(), "Roll");
 			Turn.updateTurn(dice.roll(), player2);
 		}
 		}
