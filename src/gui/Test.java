@@ -22,7 +22,7 @@ public class Test {
 	
 	fields[1] = new Shipping.Builder()
 			.setTitle("Tower")
-			.setSubText("+200 gold")
+			.setSubText("+250 gold")
 			.setDescription("The Tower")
 			.setBgColor(Color.white)
 			.setPicture("lul.png")
