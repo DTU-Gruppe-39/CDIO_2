@@ -7,7 +7,7 @@ public class TwoDice {
 	private int faces = 6;
 	
 	public TwoDice(int die1, int die2) {
-		this.die1 = die2;
+		this.die1 = die1;
 		this.die2 = die2;
 	}
 	public int roll() {		//Rolls both dice to a value between 1 and 6.
