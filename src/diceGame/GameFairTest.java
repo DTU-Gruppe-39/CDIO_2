@@ -32,7 +32,7 @@ package diceGame;
 			int win1=0;
 			int win2=0;
 			GameFairTest.createPlayers("Player one", "Player two", "account1", "account2");
-			for(int i=0;i<10000;i++) {
+			for(int i=0;i<100000;i++) {
 				while (player1.getBalance() < 3000 && player2.getBalance() < 3000) {
 					if (whosTurn == 0) {
 						GameFairTest Turn = new GameFairTest();
