@@ -4,6 +4,7 @@ package diceGame;
 	
 
 	import java.io.BufferedReader;
+
 	import java.io.FileReader;
 	import java.io.IOException;
 
@@ -30,17 +31,17 @@ package diceGame;
 			//		TwoDice(1, 1);
 			int win1=0;
 			int win2=0;
-			Game.createPlayers("Player one", "Player two", "account1", "account2");
+			GameFairTest.createPlayers("Player one", "Player two", "account1", "account2");
 			for(int i=0;i<10000;i++) {
 				while (player1.getBalance() < 3000 && player2.getBalance() < 3000) {
 					if (whosTurn == 0) {
-						Game Turn = new Game();
+						GameFairTest Turn = new GameFairTest();
 						//			GUI.getUserButtonPressed("                                            Current turn: " + player1.getName(), "Roll");
 						Turn.updateTurn(dice.roll(), player1);
 						//					System.out.println(dice.getDiceTotal());
 						//					System.out.println("Player 1 balance " + player1.getBalance());
 					} else {
-						Game Turn = new Game();
+						GameFairTest Turn = new GameFairTest();
 						//			GUI.getUserButtonPressed("                                            Current turn: " + player2.getName(), "Roll");
 						Turn.updateTurn(dice.roll(), player2);
 						//					System.out.println(dice.getDiceTotal());
@@ -61,8 +62,8 @@ package diceGame;
 				player1.setBalance(1000);
 				player2.setBalance(1000);
 			}
-			System.out.println(""+win2);
-			System.out.println(""+win1);
+			System.out.println("Player one won "+win1+" games");
+			System.out.println("Player two won "+win2+" games");
 
 			//--------Skal nok slettes
 			//Player one = new Player("Peter", Player.createDice(), 1000);
@@ -107,7 +108,7 @@ package diceGame;
 
 
 
-		//Read from textFile
+//		//Read from textFile
 		public static void printText (int field) throws IOException {
 			String str = "";
 			String file = "src/textFile.txt";
